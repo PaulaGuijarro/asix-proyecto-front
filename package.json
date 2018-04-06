@@ -1,0 +1,24 @@
+{
+  "name": "asix-proyecto-front",
+  "version": "1.0.0",
+  "description": "Aplicación web estática para gestión de usuarios que forma parte del proyecto final de ASIX",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulaGuijarro/asix-proyecto-front.git"
+  },
+  "keywords": [
+    "asix",
+    "proyecto",
+    "front"
+  ],
+  "author": "Paula Guijarro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaulaGuijarro/asix-proyecto-front/issues"
+  },
+  "homepage": "https://github.com/PaulaGuijarro/asix-proyecto-front#readme"
+}
