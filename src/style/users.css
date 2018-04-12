@@ -1,0 +1,173 @@
+body {
+  background-color: #313a43;
+  font-family: 'Poiret One', cursive;
+  color: white;
+  display: flex;
+  min-height: 98vh;
+  flex-direction: column;  
+}
+
+.header {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #637081;
+  color: black;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: 'Amatic SC', cursive;
+}
+
+
+#button-logout {
+  cursor: pointer;
+  height: 40px;
+  width: auto;
+  padding-top: 1rem;
+}
+
+.logout-wrapper .logout {
+  visibility:hidden;
+}
+
+.logout-wrapper:hover .logout {
+  visibility:visible;
+  font-weight: bold;
+  font-family: 'Poiret One', cursive;
+}
+
+.add-user-section {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid rgba(0, 0, 0); */
+  padding: 0.5rem;
+  margin: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.add-user-section .add-user-content {
+  display: flex;
+  align-items: center;
+}
+.add-user-section .input-fields {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 500px;
+}
+.add-user-section .input-fields .input-add-user {
+  display: flex;
+  padding: 3px 0;
+}
+.add-user-section .input-fields .input-add-user label {
+  width: 150px;
+}
+.add-user-section .input-fields .input-add-user .input-element {
+ flex-grow: 1;
+}
+.add-user-section .user-add {
+  width: 50%;
+  padding-left: 50px;
+}
+
+#user-add-button {
+  width: 40px;
+  cursor: pointer;
+}
+
+.table-section {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  color: white;
+  flex: 1;
+}
+
+#tabla-usuarios th {
+  text-align: left;
+}
+
+#tabla-usuarios tbody {
+  color: black;
+}
+
+td.details-control {
+  background: url('../images/details_open.png') no-repeat center center;
+  cursor: pointer;
+}
+tr.shown td.details-control {
+  background: url('../images/details_close.png') no-repeat center center;
+}
+
+table.dataTable tbody td.no-padding {
+  padding: 0;
+}
+
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+  color: #fffefe;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+  color: #fff !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #fff !important;
+}
+
+.user-info-wrapper {
+  display: none;
+  background: #637081;
+}
+.user-info {
+  display: flex;
+  padding: 5px;
+}
+.user-info .user-data {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 600px;
+}
+.user-info .user-data .user-editable {
+  display: flex;
+  padding: 3px 0;
+}
+.user-info .user-data .user-editable > label {
+  width: 150px;
+  text-align: right;
+  padding-right: 10px;
+}
+.user-info .user-data .user-editable > .input-element {
+  flex-grow: 1;
+}
+.user-info .user-actions {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.user-info .user-actions .button-wrapper {
+  text-align: center;
+}
+.user-info .user-actions .button-img {
+  width: 50px;
+  cursor: pointer;
+}
+
+footer {
+  border-radius: 5px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  background-color: #637081;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+  font-family: 'Amatic SC', cursive;
+
+}

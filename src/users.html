@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Administración de usuarios</title>
+  <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="style/users.css" />
+</head>
+
+<body>
+  <div class="header">
+    <h1>PANEL DE ADMINISTRACIÓN DE USUARIOS</h1>
+    <div class="logout-wrapper">
+      <img id="button-logout" src="images/logout.png" class="hover-logout" />
+      <div class="logout">Salir</div>
+    </div>
+  </div>
+
+  <div class="add-user-section">
+    <h3>Nuevo usuario</h3>
+    <div class="add-user-content">
+      <div class="input-fields">
+        <div class="input-add-user">
+          <label for="user-add-name">Nombre:</label>
+          <input type="text" name="name" id="user-add-name" class="input-element">
+        </div>
+        <div class="input-add-user">
+          <label for="user-add-lastname">Apellido:</label>
+          <input type="text" name="lastname" id="user-add-lastname" class="input-element">
+        </div>
+        <div class="input-add-user">
+          <label for="user-add-dni">DNI:</label>
+          <input type="text" name="dni" id="user-add-dni" class="input-element">
+        </div>
+        <div class="input-add-user">
+          <label for="user-add-username">Email:</label>
+          <input type="email" name="email" id="user-add-email" class="input-element">
+        </div>
+        <div class="input-add-user">
+          <label for="user-add-department">Departamento:</label>
+          <select name="department" id="user-add-department" class="input-element">
+            <option value="RRHH">RRHH</option>
+            <option value="FINANCIERO">FINANCIERO</option>
+            <option value="IT">IT</option>
+            <option value="DIRECTIVO">DIRECTIVO</option>
+          </select>
+        </div>
+      </div>
+      <div class="user-add">
+        <div class="add-wrapper">
+          <img id="user-add-button" src="images/add.png" alt="Añadir usuario">
+          <div class="add">Añadir</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-section">
+    <table id="tabla-usuarios" class="display">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>DNI</th>
+          <th>Email</th>
+          <th>Departamento</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <footer>
+    <div>PAULA GUIJARRO - PROYECTO ASIX - 2018</div>
+  </footer>
+
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/users.js"></script>
+
+</html>

@@ -1,0 +1,79 @@
+html {
+  height: 100%;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #313a43;
+  font-family: 'Poiret One', cursive;
+}
+
+.login-box {
+  padding: 2rem;
+  background-color: #637081;
+  border-radius: 3px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.login-box .login-header {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+
+.input-box {
+  padding: 0.5rem 0;
+}
+.input-box input {
+  width: 100%;
+  height: 25px;
+  border-radius: 2px;
+  border-width: 0;
+  border-style: none;
+  text-align: center;
+  font-size: 15px;
+}
+.input-box input:focus {
+  outline: none;
+}
+.input-box input::placeholder {
+  color: #536b78;
+  font-weight: 100;
+}
+
+.login-button {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.login-button button {
+  width: 50%;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 7px;
+  background-color: #accbe1;
+  color: #353c46;
+  font-size: 20px;
+}
+.login-button .button-disabled {
+  background-color: #7a8892;
+  color: #565a61;
+  pointer-events: none;
+}
+.login-button button:focus {
+  outline: none;
+  background-color: #89a7c3;
+  color: white;
+}
+
