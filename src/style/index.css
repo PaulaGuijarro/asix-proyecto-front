@@ -1,3 +1,7 @@
+/*
+* Estilos correspondientes a la página de inicio, que a su vez es la de login.
+*/
+
 html {
   height: 100%;
 }
@@ -15,6 +19,8 @@ body {
   font-family: 'Poiret One', cursive;
 }
 
+/* Estilos del contenedor principal */
+
 .login-box {
   padding: 2rem;
   background-color: #637081;
@@ -30,6 +36,8 @@ body {
   padding-bottom: 1rem;
   font-weight: bold;
 }
+
+/* Estilos de cada campo de texto */
 
 .input-box {
   padding: 0.5rem 0;
@@ -50,6 +58,8 @@ body {
   color: #536b78;
   font-weight: 100;
 }
+
+/* Estilos del botón de login */
 
 .login-button {
   display: flex;

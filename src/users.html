@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
+<!--  
+  Página correspondiente al listado de usuarios de la aplicación. 
+  Contiene los elementos necesarios para añadir, modificar o eliminar un usuario 
+-->
 
 <head>
   <meta charset="utf-8" />
   <title>Administración de usuarios</title>
-  <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type="text/css">
+
+  <!-- Estilos necesarios -->
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="style/jquery.dataTables.min.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="style/users.css" />
+  <link href="style/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+  <link href="style/users.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+  <!-- Cabecera que contiene un título y el botón de logout -->
   <div class="header">
     <h1>PANEL DE ADMINISTRACIÓN DE USUARIOS</h1>
     <div class="logout-wrapper">
@@ -19,6 +26,7 @@
     </div>
   </div>
 
+  <!-- Sección que permite añadir un usuario a la aplicación -->
   <div class="add-user-section">
     <h3>Nuevo usuario</h3>
     <div class="add-user-content">
@@ -58,7 +66,9 @@
     </div>
   </div>
 
+  <!-- Sección que contiene la tabla de usuarios. -->
   <div class="table-section">
+    <!-- Elemento que la libreria jquery datatables va a modificar. Se referencia mediante el identificador único -->
     <table id="tabla-usuarios" class="display">
       <thead>
         <tr>
@@ -74,11 +84,15 @@
       </tbody>
     </table>
   </div>
+
+  <!-- Pie de página -->
   <footer>
     <div>PAULA GUIJARRO - PROYECTO ASIX - 2018</div>
   </footer>
 
 </body>
+
+<!-- Importación de ficheros javascript -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery.dataTables.min.js"></script>
 <script src="js/users.js"></script>
