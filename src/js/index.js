@@ -1,7 +1,6 @@
 // Hasta que el cliente no ha descargado todo y lo está mostrando, no cargamos jQuery.
 // De esta manera evitamos que jQuery intente acceder a elementos del DOM que no se han renderizado todavía.
 $(document).ready(function() {
-
   /***********************************************************************
    *                       INICIALIZACIÓN
    ***********************************************************************/
@@ -66,5 +65,5 @@ $(document).ready(function() {
    ***********************************************************************/
 
   // Asignamos al botón de login una acción para cuando un usuario haga click.
-  $('#login-button').click(login());
+  $('#login-button').click(login);
 });
