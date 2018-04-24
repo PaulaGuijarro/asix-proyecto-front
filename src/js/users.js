@@ -7,6 +7,7 @@ $(document).ready(function() {
 
   // Obtenemos el token de sesión de localStorage, ya que es posible que el usuario se hubiera logado con anterioridad.
   var token = window.localStorage.getItem('token');
+  var serverUrl = 'http://192.168.99.100:3000';
 
   // Definimos la variable donde la librería jquery.dataTables va a renderizar la tabla autogenerada, y configuramos
   // la tabla en función de nuestras necesidades.
@@ -42,7 +43,7 @@ $(document).ready(function() {
     // Si por el contrario hay un token, debemos comprobar su validez con una petición al servidor
     $.ajax({
       type: 'GET',
-      url: 'http://localhost:3000/check',
+      url: serverUrl + '/check',
       data: { token },
       success: function() {
         // Si el token es válido, entonces hacemos una petición para obtener el listado de usuarios
@@ -52,7 +53,7 @@ $(document).ready(function() {
             // Necesitamos añadir el token en la cabecera para que el servidor sepa que estamos autenticados
             request.setRequestHeader('token-seguro', token);
           },
-          url: 'http://localhost:3000/secure/users',
+          url: serverUrl + '/secure/users',
           error: function() {
             // Si hay cualquier tipo de error, por precaución vamos al login
             window.location.replace('index.html');
@@ -163,7 +164,7 @@ $(document).ready(function() {
         // Enviamos el token en una cabecera para securizar la petición
         request.setRequestHeader('token-seguro', token);
       },
-      url: 'http://localhost:3000/secure/users',
+      url: serverUrl + '/secure/users',
       data: {
         name,
         lastname,
@@ -177,7 +178,7 @@ $(document).ready(function() {
           beforeSend: function(request) {
             request.setRequestHeader('token-seguro', token);
           },
-          url: 'http://localhost:3000/secure/users',
+          url: serverUrl + '/secure/users',
           success: function(data) {
             // Si la función se ha ejecutado correctamente, primero reseteamos los input de creación de usuario.
             $('#user-add-name').val('');
@@ -218,7 +219,7 @@ $(document).ready(function() {
         // Enviamos el token en una cabecera para securizar la petición
         request.setRequestHeader('token-seguro', token);
       },
-      url: 'http://localhost:3000/secure/users/' + id,
+      url: serverUrl + '/secure/users/' + id,
       data: {
         name,
         lastname,
@@ -239,7 +240,7 @@ $(document).ready(function() {
             // Enviamos el token en una cabecera para securizar la petición.
             request.setRequestHeader('token-seguro', token);
           },
-          url: 'http://localhost:3000/secure/users',
+          url: serverUrl + '/secure/users',
           success: function(data) {
             // Si la petición funciona correctamente, borramos el contenido actual de la tabla y pintamos el nuevo contenido.
             usersTable.clear().draw();
@@ -264,7 +265,7 @@ $(document).ready(function() {
         // Enviamos el token en una cabecera para securizar la petición
         request.setRequestHeader('token-seguro', token);
       },
-      url: 'http://localhost:3000/secure/users/' + id,
+      url: serverUrl + '/secure/users/' + id,
       error: function() {
         // Si hay cualquier error, mostramos un mensaje
         console.log('No se pudo borrar el usuario');
@@ -277,7 +278,7 @@ $(document).ready(function() {
             // Enviamos el token en una cabecera para securizar la petición
             request.setRequestHeader('token-seguro', token);
           },
-          url: 'http://localhost:3000/secure/users',
+          url: serverUrl + '/secure/users',
           success: function(data) {
             // Si el listado se obtiene correctamente, borramos el contenido actual de la tabla y pintamos el que obtenemos
             // del servidor

@@ -7,6 +7,7 @@ $(document).ready(function() {
 
   // Obtenemos el token de sesión de localStorage, ya que es posible que el usuario se hubiera logado con anterioridad.
   var token = window.localStorage.getItem('token');
+  var serverUrl = 'http://192.168.99.100:3000';
 
   /***********************************************************************
    *                       CHECKEO DE SEGURIDAD
@@ -16,7 +17,7 @@ $(document).ready(function() {
     // Si el token existe, comprobamos su validez ejecutando una llamada al servidor.
     $.ajax({
       type: 'GET',
-      url: 'http://localhost:3000/check',
+      url: serverUrl + '/check',
       data: { token },
       success: function() {
         // En caso de que sea válido, vamos al contenido securizado de la aplicación.
@@ -45,7 +46,7 @@ $(document).ready(function() {
     // Hacemos una petición al servidor con estos datos para realizar un intento de autenticación
     $.ajax({
       type: 'POST',
-      url: 'http://localhost:3000/login',
+      url: serverUrl + '/login',
       data: { usuario, password },
       success: function(data) {
         // Si el servidor devuelve que el login es correcto, devolverá un token de sesión, el cual almacenaremos en localStorage.
