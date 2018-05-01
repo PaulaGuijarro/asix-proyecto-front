@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   // Obtenemos el token de sesión de localStorage, ya que es posible que el usuario se hubiera logado con anterioridad.
   var token = window.localStorage.getItem('token');
-  var serverUrl = 'http://192.168.99.100:3000';
+  var serverUrl = 'http://192.168.99.97:3000';
 
   /***********************************************************************
    *                       CHECKEO DE SEGURIDAD
